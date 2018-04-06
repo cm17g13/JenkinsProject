@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Script 2: Echo the contents of the current working directory into a file, which
+#is then copied to the /etc/ folder.
+
+ls | tee > currentDirectory.txt
+sudo cp currentDirectory.txt /etc/

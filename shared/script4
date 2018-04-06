@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#Script 4: Take user input of a value and distinguish whether 
+#it is a prime number. 
+echo "What number would you like to check?"
+
+read number
+boolean=true
+
+if [[ $number -lt 2 || $((number%2)) -eq 0 ]]
+then
+	boolean=false
+	echo "not prime"
+else
+	for (( var=3; ((var*var))<=$number; var+=2 ))
+	do
+		if [ $((number%var)) -eq 0 ]
+		then
+			boolean=false		
+			echo "not prime"
+		fi
+	done
+	if [ $boolean == true ]
+	then
+		echo $number "is prime"
+	fi
+fi
+	

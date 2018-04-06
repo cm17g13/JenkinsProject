@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Script 1: Allow the user to input a file name, and if that file is found in the
+#working directory, change the file extension to .sh and make it an executable file
+#changed to be writen in shell
+
+echo "What is the name of the file you want to look for, exclude extension?"
+
+read filename
+
+if [ -e $filename.* ]
+then
+	mv $filename.* $filename.sh
+	chmod +x $filename.sh
+elif [ -e $filename ]
+then
+	mv $filename $filename.sh
+	chmod +x $filename.sh
+else
+	echo "There is not a file by this name"
+fi
