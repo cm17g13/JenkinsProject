@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Script 3: Find all logged in users on the machine, as well as the IP address of
+#the machine, and output it into a file. The script should also ask the user if
+#they want to delete the existing log file if it is present
+
+if [ -e logFile.txt ]
+then
+	echo "Would you like to delete the log file? [y/n]"
+	read response 
+	if [ "$response" == "y" ]
+	then	
+		rm logFile.txt
+		touch logFile.txt
+	fi
+fi 
+echo -n "Current time: "  >> logfile.txt
+date '+%A %W %Y %X' >> logfile.txt 
+w >> logFile.txt
+echo "All done"

@@ -1,0 +1,5 @@
+Current time: Friday 14 2018 08:46:20 AM
+ 08:46:20 up  3:29,  2 users,  load average: 0.05, 0.09, 0.06
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+vagrant  :0       :0               05:16   ?xdm?  19:40   0.09s init --user
+vagrant  pts/2    10.0.2.2         05:28    4.00s  0.81s  0.00s w
